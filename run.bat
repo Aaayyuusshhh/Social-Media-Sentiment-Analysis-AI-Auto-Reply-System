@@ -1,0 +1,3 @@
+@echo off
+echo Starting Flask Server with Instagram Bot...
+python app.py
