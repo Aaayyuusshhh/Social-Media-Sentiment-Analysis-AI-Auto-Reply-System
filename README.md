@@ -1,7 +1,7 @@
 # 🌐 Social Media Sentiment Analysis & AI Auto-Reply System  
 
-Real-time NLP system for sentiment classification and automated responses on social media.  
-End-to-end pipeline integrating APIs, transformer models, and LLM-driven replies.   
+Real-time NLP system for sentiment classification and automated responses.  
+End-to-end pipeline integrating APIs, transformers, and LLM-driven replies.   
 ---
 
 ## 🚀 Overview  
