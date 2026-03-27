@@ -1,48 +1,73 @@
-# 🌐 AI-Powered Sentiment Analysis & Auto-Reply System  
+# 🌐 Social Media Sentiment Analysis & AI Auto-Reply System  
 
-An intelligent system that analyzes customer feedback, detects sentiment, and generates **brand-safe AI replies** in real time. Equipped with an interactive analytics dashboard to monitor engagement and sentiment trends.  
+Real-time NLP system for sentiment classification and automated responses on social media.  
+End-to-end pipeline integrating APIs, transformer models, and LLM-driven replies.   
+---
 
+## 🚀 Overview  
+
+- Fine-tuned a transformer-based sentiment classifier on **5K+ social media comments**  
+- Deployed a **real-time inference pipeline** using Meta APIs for Instagram and Facebook  
+- Built an **end-to-end automation system** from data ingestion → sentiment classification → AI-generated replies  
+- Implemented in a **real client-facing workflow**, eliminating manual response effort entirely  
 ---
 
 ## ✨ Features  
 
-- 🧠 **Sentiment Detection** – Accurately classifies comments as *positive, negative, neutral,* or *sarcasm*.  
-- 🤖 **AI Auto-Replies** – Generates context-aware responses aligned with your brand’s tone.  
-- 📊 **Analytics Dashboard** – Built with **Streamlit** for visualizing sentiment distribution & activity metrics.  
-- 🔒 **Brand-Safe Responses** – Ensures replies remain on-brand, ethical, and free from harmful content.  
-- ⚡ **Real-Time Engagement** – Seamless integration via **Flask APIs** for instant auto-replies.  
+### 🧠 Sentiment Intelligence Engine  
+- Multi-class sentiment classification: positive, negative, neutral  
+- Robust handling of noisy, short-form social media text  
+- Optimized transformer pipeline for real-time inference  
+
+### 🤖 Autonomous Reply Generation  
+- Context-aware replies generated using LLMs  
+- Maintains conversational relevance and tone consistency  
+- Designed to simulate human-like brand responses at scale  
+
+### ⚡ End-to-End Automation Pipeline  
+- Automated ingestion of comments via **Meta Graph API**  
+- Real-time processing and triggering of reply generation  
+- Fully eliminates manual monitoring and response effort  
+
+### 🔒 Brand Safety & Control  
+- Rule-based filtering layer to enforce safe and controlled outputs  
+- Prevents harmful or off-tone responses in production scenarios  
+
+### 📊 Monitoring & Analytics  
+- Streamlit dashboard for sentiment tracking and engagement insights  
+- Real-time visibility into system activity and model behavior  
 
 ---
 
-## 📂 Project Structure  
+## 🏗️ Project Structure  
 
 ```bash
 social_sentiment_ai/
 │── requirements.txt
 │── README.md
-│── .env                # API keys
-│── main.py             # Entry point for Streamlit dashboard
+│── .env
+│── main.py
 │
 ├── sentiment_analysis/
-│   ├── preprocess.py        # Text preprocessing
-│   ├── sentiment_model.py   # Sentiment pipeline
-│   ├── sarcasm_model.py     # Sarcasm detection
-│   ├── explain.py           # SHAP explainability
+│   ├── preprocess.py
+│   ├── sentiment_model.py
+│   ├── sarcasm_model.py
+│   ├── explain.py
 │
 ├── auto_reply/
-│   ├── reply_generator.py   # LLM response generation
-│   ├── brand_guard.py       # Brand-safety filter
-│   ├── api.py               # Flask APIs
+│   ├── reply_generator.py
+│   ├── brand_guard.py
+│   ├── api.py
 │
 ├── social_media_connectors/
 │   ├── instagram_api.py
-│   ├── youtube_api.py
-│   ├── twitter_api.py
 │   ├── facebook_api.py
+│   ├── twitter_api.py
+│   ├── youtube_api.py
 │
 ├── dashboard/
-│   ├── dashboard.py         # Streamlit dashboard
-│   ├── plots.py             # Visualizations
+│   ├── dashboard.py
+│   ├── plots.py
 │
 ├── utils/
 │   ├── logger.py
@@ -73,32 +98,52 @@ python src/app.py
 ```bash
 streamlit run dashboard/app.py
 ```
-## 🔧 Tech Stack
+## 🔧 Tech Stack  
 
-Our solution leverages a **modern, modular technology stack** to ensure scalability, performance, and maintainability:
+The system is built on a **modular AI + backend architecture** designed for real-time inference, automation, and scalability.
 
-- **🐍 Python** – Core programming language powering backend logic and ML pipeline.  
-- **⚡ Flask** – REST API framework for serving sentiment analysis and auto-reply predictions.  
-- **📊 Streamlit** – User-friendly dashboard for real-time monitoring, analytics, and insights.  
-- **🧠 Machine Learning**  
-  - **Scikit-learn** – Traditional ML models for baseline sentiment analysis.  
-  - **Hugging Face Transformers** – State-of-the-art deep learning models for contextual NLP.  
-- **📂 Data Handling**  
-  - **Pandas** – Efficient tabular data manipulation.  
-  - **NumPy** – Fast numerical computations and preprocessing.  
-- **🗄️ Database (optional integration)** – SQLite / MongoDB for storing chat histories, sentiment logs, and user responses.  
-- **☁️ Deployment & Environment**  
-  - **Docker** – Containerization for reproducible builds and portability.  
-  - **Streamlit Cloud / Heroku** – Hosting and deployment of the dashboard & API.  
-- **🧪 Development & Collaboration**  
-  - **Jupyter / Colab** – Rapid experimentation and prototyping.  
-  - **Git & GitHub** – Version control, collaboration, and CI/CD workflows.  
+### Core Technologies  
+- **Python** – Primary language for ML pipelines, backend services, and automation workflows  
+- **Flask** – Lightweight REST API layer for serving sentiment predictions and triggering reply generation  
+- **Streamlit** – Interactive dashboard for real-time monitoring and analytics  
 
-➡️ Together, these technologies form a **scalable sentiment-aware communication system** with seamless integration between data processing, ML models, and interactive visualization.  
-## 🤝 Contributing
+### Machine Learning & NLP  
+- **PyTorch** – Model training and inference  
+- **Hugging Face Transformers** – Transformer-based models for contextual sentiment classification  
+- **Scikit-learn** – Supporting ML utilities and baseline experimentation  
 
-Contributions are welcome! Please open an issue or submit a pull request if you’d like to improve the system.
+### LLM & Automation  
+- **OpenAI API** – Context-aware reply generation  
+- **Prompt Engineering** – Controlled response generation aligned with tone and context  
+- **API-driven Workflow Automation** – Integration of ML outputs into real-time response pipelines  
 
-## 📜 License
+### Data & Processing  
+- **Pandas** – Data manipulation and preprocessing  
+- **NumPy** – Efficient numerical computation  
 
-his project is licensed under the [MIT License](./LICENSE).
+### Integrations  
+- **Meta Graph API** – Real-time ingestion of Instagram and Facebook comments  
+
+### Deployment & Environment  
+- **Docker (optional)** – Containerized deployment for reproducibility  
+- **Cloud-ready architecture** – Deployable on platforms like AWS, GCP, or Streamlit Cloud  
+
+---
+
+## 📈 Impact  
+
+- Designed and deployed a **real-time sentiment analysis and response system** for social media workflows  
+- Eliminated manual reply processes through **end-to-end automation pipelines**  
+- Demonstrated integration of **ML models, APIs, and LLMs in a production-style system**  
+
+---
+
+## 🤝 Contributing  
+
+Contributions are welcome. Feel free to open issues or submit pull requests for improvements.
+
+---
+
+## 📜 License  
+
+This project is licensed under the [MIT License](./LICENSE).
