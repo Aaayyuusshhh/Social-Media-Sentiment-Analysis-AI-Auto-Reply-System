@@ -35,7 +35,7 @@ End-to-end pipeline integrating APIs, transformers, and LLM-driven replies.
 
 ### 📊 Monitoring & Analytics  
 - Streamlit dashboard for sentiment tracking and engagement insights  
-- Real-time visibility into system activity and model behavior  
+- Real-time visibility into system activity and model behavior
 
 ---
 
